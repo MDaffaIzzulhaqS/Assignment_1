@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
 
@@ -11,8 +13,15 @@
         android:id="@+id/comment"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/purple_200"
+        android:hint="@string/hint_comment"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine" />
-</RelativeLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="20dp"
+        android:hint="@string/btn_text"/>
+</LinearLayout>

@@ -23,15 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         SharedPreferences sh = getSharedPreferences("MySharedPrefComment", MODE_PRIVATE);
         String s1 = sh.getString("comment", "");
-
         comment.setText(s1);
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPrefComment", MODE_PRIVATE);
-        SharedPreferences.Editor se = sharedPreferences.edit();
+    protected void onStop() {
+        super.onStop();
+        SharedPreferences sp = getSharedPreferences("MySharedPrefComment", MODE_PRIVATE);
+        SharedPreferences.Editor se = sp.edit();
 
         se.putString("comment", comment.getText().toString());
         se.apply();
